@@ -89,7 +89,7 @@ namespace ProjetoTI18N
                     default:
                         Console.WriteLine("Opção escolhida não é válida, tente novamente!");
                         break;
-                }//fim do switch
+                }//fim do switc
                 
             } while (ConsultarOpcao != 0);
         }//fim do operaçao
