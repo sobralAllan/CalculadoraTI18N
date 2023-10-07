@@ -37,11 +37,13 @@ namespace ProjetoTI18N
         public void Menu()
         {
             Console.WriteLine("------- Menu ------ " +
-                              "\n0. Sair" +
-                              "\n1. Somar" +
-                              "\n2. Subtrair" +
-                              "\n3. Dividir" +
+                              "\n0. Sair"        +
+                              "\n1. Somar"       +
+                              "\n2. Subtrair"    +
+                              "\n3. Dividir"     +
                               "\n4. Multiplicar" +
+                              "\n5. Potência"    +
+                              "\n6. Raiz 1º número"  +
                               "\n\n Escolha uma das opções acima: ");
             ConsultarOpcao = Convert.ToInt32(Console.ReadLine());
         }//fim do método Menu
@@ -86,10 +88,19 @@ namespace ProjetoTI18N
                         ColetarNum2();
                         Console.WriteLine("A multiplicação dos números digitados é: " + calc.Multiplicar());
                         break;
+                    case 5:
+                        ColetarNum1();
+                        ColetarNum2();
+                        Console.WriteLine("A potência é: " + calc.Potencia());
+                        break;
+                    case 6:
+                        ColetarNum1();
+                        Console.WriteLine("A raiz do primeiro número é: " + calc.Raiz());
+                        break;
                     default:
                         Console.WriteLine("Opção escolhida não é válida, tente novamente!");
                         break;
-                }//fim do switc
+                }//fim do switch
                 
             } while (ConsultarOpcao != 0);
         }//fim do operaçao
